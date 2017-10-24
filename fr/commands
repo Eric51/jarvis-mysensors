@@ -1,0 +1,18 @@
+#pour le retour de valeur en http
+#TS==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py NODE SENSOR "{1}")"
+TSALON==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 1 0 "{1}")"
+HSALON==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 1 1 "{1}")"
+TSERRE==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 0 "{1}")"
+HSERRE==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 1 "{1}")"
+HSSERRE==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 2 "{1}")"
+
+
+#la ligne doit être configurer comme suit:
+#*TEMPER*SALON*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py NODE SENSOR "VOTRE COMMANDE VOCALE {1} AVEC LES UNITES")"
+
+*TEMPER*SALON*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 1 0 "la température du salon est de {1} degrés")"
+*HUMID*SALON*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 1 1 "le taux d'humidité du salon est de {1} pourcent")"
+*TEMPER*SER*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 0 "la température dans la serre est de {1} degrés")"
+*HUMID*SOL*SER*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 2 "le taux d'humidité dans le sol de la serre est de {1} pourcent")"
+*HUMID*SER*==say "$(python ./plugins_installed/jarvis-mysensors/api/mysensors.py 2 1 "le taux d'humidité dans la serre est de {1} pourcent")"
+
